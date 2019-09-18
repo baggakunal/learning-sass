@@ -1,7 +1,23 @@
+// Number
+$margin: 0;
+// String
+$my-text: "Hello, World!";
+// Color
+$bg-color: #CCC;
+// Boolean
+$flag: true;
+
 $font-family: Helvetica, sans-serif;
 $base-color: #333;
 
 body {
     font: 100% $font-family;
     color: $base-color;
+    margin: $margin;
+    background-color: $bg-color;
+}
+
+.some-text:after {
+    content: $my-text;
+    @if $flag { color: #F00; }
 }
