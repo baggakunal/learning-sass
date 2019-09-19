@@ -16,3 +16,41 @@ body {
     content: $my-text;
     @if $flag { color: #F00; }
 }
+
+
+// Control directives
+$p-type: success;
+p.if-directive {
+    @if $p-type == info {
+        color: $grey;
+    } @else if $p-type == success {
+        color: $green;
+    } @else if $p-type == error {
+        color: $red;
+    } @else if $p-type == warning {
+        color: $yellow;
+    }
+}
+
+div.for-while-directive {
+    margin-right: 20px;
+
+    @for $i from 1 through 3 {
+        .fs-#{$i} { font-size: #{8 * $i}px; }
+    }
+
+    $i: 4;
+    @while $i <= 6 {
+        .fs-#{$i} { font-size: #{8 * $i}px; }
+        $i: $i + 1;
+    }
+}
+
+ul.nav-bar.each-directive li {
+    @each $color in "red", "green", "orange", "purple" {
+        &.bg-color-#{$color} { background-color: #{$color}; }
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}

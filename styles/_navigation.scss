@@ -12,12 +12,10 @@ ul.nav-bar {
         justify-content: center;
         color: #FFF;
         background-color: $tab-color;
-        border-bottom: 1px solid $tab-color;
         cursor: pointer;
 
         &:hover {
             background-color: $tab-hover-color;
-            border-bottom-color: $tab-hover-color;
             transition: 300ms;
         }
     }
