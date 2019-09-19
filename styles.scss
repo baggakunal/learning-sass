@@ -1,23 +1,37 @@
-// Number
-$margin: 0;
-// String
-$my-text: "Hello, World!";
-// Color
-$bg-color: #CCC;
-// Boolean
-$flag: true;
-
-$font-family: Helvetica, sans-serif;
-$base-color: #333;
+@import './styles/variables';
 
 body {
     font: 100% $font-family;
-    color: $base-color;
-    margin: $margin;
-    background-color: $bg-color;
+    color: $base-font-color;
+    margin: 10;
 }
 
 .some-text:after {
     content: $my-text;
     @if $flag { color: #F00; }
+}
+
+ul.nav-bar {
+    padding-left: 0;
+
+    li {
+        height: 30px;
+        width: 100px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        background-color: $tab-color;
+        border-bottom: 1px solid $tab-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $tab-hover-color;
+            border-bottom-color: $tab-hover-color;
+            transition: 300ms;
+        }
+        // a {
+        //     // text-decoration: none;
+        // }
+    }
 }
