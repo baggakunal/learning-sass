@@ -1,7 +1,11 @@
 @import './styles/variables';
 
 body {
-    font: 100% $font-family;
+    font: {
+        size: 100%;
+        family: $font-family;
+        weight: 400;
+    }
     color: $base-font-color;
     margin: 10;
 }
