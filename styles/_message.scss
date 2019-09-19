@@ -3,6 +3,10 @@
 .message {
     margin: 10px;
     height: 50px;
+    @extend .centered-text;
+}
+
+.centered-text {
     line-height: 50px;
     text-align: center;
     vertical-align: middle;    
