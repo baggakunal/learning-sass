@@ -6,6 +6,7 @@ ul.nav-bar {
     li {
         height: 30px;
         width: 100px;
+        margin-top: 5px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -20,4 +21,16 @@ ul.nav-bar {
             transition: 300ms;
         }
     }
+}
+
+@media screen and (min-width: $medium-screen) {
+    ul.nav-bar li { width: 24%; }
+}
+
+@media screen and (max-width: $medium-screen) {
+    ul.nav-bar li { width: 49%; }
+}
+
+@media screen and (max-width: $small-screen) {
+    ul.nav-bar li { width: 100%; }
 }
