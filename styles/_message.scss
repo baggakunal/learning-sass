@@ -1,0 +1,29 @@
+@import 'variables';
+
+.message {
+    margin: 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;    
+}
+
+.info {
+    @extend .message;
+    background-color: $grey;
+}
+
+.success {
+    @extend .message;
+    background-color: $green;
+}
+
+.error {
+    @extend .message;
+    background-color: $red;
+}
+
+.warning {
+    @extend .message;
+    background-color: $yellow;
+}
