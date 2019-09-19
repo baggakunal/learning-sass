@@ -34,7 +34,8 @@ p.if-directive {
 
 div.for-while-directive {
     margin-right: 20px;
-
+    
+    // @warn "Carefull with the loops";
     @for $i from 1 through 3 {
         .fs-#{$i} { font-size: #{8 * $i}px; }
     }
@@ -44,6 +45,7 @@ div.for-while-directive {
         .fs-#{$i} { font-size: #{8 * $i}px; }
         $i: $i + 1;
     }
+    // @debug "Exited loop successfully";
 }
 
 ul.nav-bar.each-directive li {
