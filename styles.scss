@@ -54,3 +54,26 @@ ul.nav-bar.each-directive li {
         opacity: 0.7;
     }
 }
+
+// Check the generated css
+.at-root-directive {
+    font-size: 18px;
+    margin-top: 20px;
+
+    @at-root {    
+        .style-i {
+            font: {
+                size: 16px;
+                style: italic;
+            }
+        }
+    
+        .style-b {
+            font: { 
+                size: 16px;
+                weight: 700;
+            }
+            text-transform: uppercase;
+        }
+    }
+}
