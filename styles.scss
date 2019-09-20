@@ -1,4 +1,5 @@
 @import './styles/variables';
+@import './styles/mixins';
 @import './styles/navigation';
 @import './styles/message';
 
@@ -78,4 +79,25 @@ ul.nav-bar.each-directive li {
             text-transform: uppercase;
         }
     }
+}
+
+// Mixin usage
+.mixin-div {
+    @include standard-border;
+    @include centered-text;
+    height: 50px;
+    width: 100%;
+    color: #FFF;
+    background-color: #AAA;
+    margin-top: 10px;
+}
+
+.mixin-function-div {
+    @include standard-border-function(#0F0, 5px);
+    @include centered-text-function(100px);
+    height: 100px;
+    width: 100%;
+    color: #FFF;
+    background-color: #0F0;
+    margin-top: 10px;
 }

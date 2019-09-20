@@ -1,0 +1,32 @@
+@mixin rounded-border {
+    border-radius: 10px;
+}
+
+@mixin standard-border {
+    // Mixin can be nested
+    @include rounded-border;
+    border: 1px solid #AAA;
+}
+
+@mixin centered-text {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+// Mixin can include arguments
+@mixin rounded-border-function($radius) {
+    border-radius: $radius;
+}
+
+@mixin standard-border-function($color, $radius) {
+    // Mixin can be nested
+    @include rounded-border-function($radius);
+    border: 1px solid $color;
+}
+
+@mixin centered-text-function($height) {
+    text-align: center;
+    vertical-align: middle;
+    line-height: $height;
+}
