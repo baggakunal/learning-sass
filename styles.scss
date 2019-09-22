@@ -101,3 +101,22 @@ ul.nav-bar.each-directive li {
     background-color: #0F0;
     margin-top: 10px;
 }
+
+.inbuild-function-div {
+    @include centered-text-function(100px);
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(200, 150, 110);
+}
+
+@function multiply-width($n) {
+    $static-width: 40px;
+    @return $n * $static-width;
+}
+
+.user-defined-function-div {
+    @extend .inbuild-function-div;
+    width: multiply-width(10);
+    background-color: rgb(63 , 0, 59);
+    color: rgb(255, 255, 255);
+}
